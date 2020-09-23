@@ -7,8 +7,16 @@
 # find the sum of the even-valued terms.
 
 def even_fib_sum(n):
-    # code goes here
-    return
-        
+    # create a for loop that loops through 1:n(40 in this case)
+    # is it inclusive?
+    # in the for loop, add the index by the index, and then return the index
+    fib1 = 1
+    fib2 = 1
+    sum = 0
 
+    while fib1 <= n:
+        if fib1 % 2 == 0:
+            sum += fib1
+        fib1, fib2 = fib2, (fib1+fib2)
+    return sum
 print(even_fib_sum(40))
